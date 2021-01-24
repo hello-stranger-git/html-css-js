@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>瀑布流</title>
+    <style scoped>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        div{
+            float: left;
+            margin: 10px 0px 0px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 300px;height: 300px;background-color: black;" class="box">1</div>
+    <div style="width: 300px;height: 200px;background-color: rgb(114, 71, 71);" class="box">2</div>
+    <div style="width: 300px;height: 400px;background-color: rgb(29, 155, 117);" class="box">3</div>
+    <div style="width: 300px;height: 340px;background-color: rgb(102, 18, 67);" class="box">4</div>
+    <div style="width: 300px;height: 440px;background-color: rgb(59, 25, 68);" class="box">5</div>
+    <div style="width: 300px;height: 200px;background-color: rgb(24, 35, 95);" class="box">6</div>
+    <div style="width: 300px;height: 500px;background-color: rgb(190, 146, 49);" class="box">7</div>
+    <div style="width: 300px;height: 340px;background-color: rgb(102, 18, 67);" class="box">8</div>
+    <div style="width: 300px;height: 200px;background-color: rgb(114, 71, 71);" class="box">2</div>
+    <div style="width: 300px;height: 400px;background-color: rgb(29, 155, 117);" class="box">3</div>
+    <div style="width: 300px;height: 340px;background-color: rgb(102, 18, 67);" class="box">4</div>
+    <div style="width: 300px;height: 440px;background-color: rgb(59, 25, 68);" class="box">5</div>
+    <div style="width: 300px;height: 200px;background-color: rgb(24, 35, 95);" class="box">6</div>
+    <div style="width: 300px;height: 500px;background-color: rgb(190, 146, 49);" class="box">7</div>
+    <div style="width: 300px;height: 340px;background-color: rgb(102, 18, 67);" class="box">8</div>
+    <div style="width: 300px;height: 200px;background-color: rgb(114, 71, 71);" class="box">2</div>
+    <div style="width: 300px;height: 400px;background-color: rgb(29, 155, 117);" class="box">3</div>
+    <div style="width: 300px;height: 340px;background-color: rgb(102, 18, 67);" class="box">4</div>
+    <div style="width: 300px;height: 440px;background-color: rgb(59, 25, 68);" class="box">5</div>
+    <div style="width: 300px;height: 200px;background-color: rgb(24, 35, 95);" class="box">6</div>
+    <div style="width: 300px;height: 500px;background-color: rgb(190, 146, 49);" class="box">7</div>
+    <div style="width: 300px;height: 340px;background-color: rgb(102, 18, 67);" class="box">8</div>
+    <div style="width: 300px;height: 200px;background-color: rgb(114, 71, 71);" class="box">2</div>
+    <div style="width: 300px;height: 400px;background-color: rgb(29, 155, 117);" class="box">3</div>
+    <div style="width: 300px;height: 340px;background-color: rgb(102, 18, 67);" class="box">4</div>
+    <div style="width: 300px;height: 440px;background-color: rgb(59, 25, 68);" class="box">5</div>
+    <div style="width: 300px;height: 200px;background-color: rgb(24, 35, 95);" class="box">6</div>
+    <div style="width: 300px;height: 500px;background-color: rgb(190, 146, 49);" class="box">7</div>
+    <div style="width: 300px;height: 340px;background-color: rgb(102, 18, 67);" class="box">8</div>
+    <div style="width: 300px;height: 200px;background-color: rgb(114, 71, 71);" class="box">2</div>
+    <div style="width: 300px;height: 400px;background-color: rgb(29, 155, 117);" class="box">3</div>
+    <div style="width: 300px;height: 340px;background-color: rgb(102, 18, 67);" class="box">4</div>
+    <div style="width: 300px;height: 440px;background-color: rgb(59, 25, 68);" class="box">5</div>
+    <div style="width: 300px;height: 200px;background-color: rgb(24, 35, 95);" class="box">6</div>
+    <div style="width: 300px;height: 500px;background-color: rgb(190, 146, 49);" class="box">7</div>
+    <div style="width: 300px;height: 340px;background-color: rgb(102, 18, 67);" class="box">8</div>
+    <ul id="ul"></ul>
+</body>
+<script src="./jquery-1.6.4.js"></script>
+<script src="./pbl.js"></script>
+</html>
