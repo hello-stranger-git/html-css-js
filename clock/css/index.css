@@ -1,0 +1,141 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/* 最外层圆 */
+.clock{
+ width: 500px;
+ height: 500px;
+ border: 20px solid black;
+ border-radius:50%; 
+ margin: 0 auto;  
+ position: relative;
+}
+.line{
+ width:20px;
+ height: 500px;
+ background-color: gray;
+ position: absolute;
+ left: 50%;
+ transform: translate(-50%,0);
+}
+/* 设置6条线，并且旋转这6条线，将最外面的那个圆平分为12等分 */
+.line1{
+ transform: translate(-50%,0) rotate(0deg);
+}
+.line2{
+    transform: translate(-50%,0) rotate(30deg);
+}
+.line3{
+    transform: translate(-50%,0) rotate(60deg);
+}
+.line4{
+    transform: translate(-50%,0) rotate(90deg);
+}
+.line5{
+    transform: translate(-50%,0) rotate(120deg);
+}
+.line6{
+    transform: translate(-50%,0) rotate(150deg);
+}
+/* 设置遮罩层，遮住6条线多余的部分，在视觉上显示出每一个整点的刻度 */
+.shade{
+    width: 420px;
+    height: 420px;
+    border-radius: 50%; 
+    background-color: white;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+/* 设置三个最中心的那个小圆 */
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    background-color: gray;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+/* 设置时针的样式和动画 */
+.hour{
+    width: 15px;
+    height: 150px;
+    background-color: blue;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-100%);
+    /* 设置动画名称 */
+    animation-name: move;
+    /* 设置时针转一圈需要使用的时间12*60*60 */
+    animation-duration: 43200s;
+    /* 设置动画一直循环播放 */
+    animation-iteration-count: infinite;
+    /* 设置动画速度 */
+    animation-timing-function: linear;
+    /* 上面的几个属性也可以全部写在一起 */
+    /* animation: move 43200s linear infinite; */
+    /* 设置指针旋转圆点 */
+    transform-origin:bottom center; 
+}
+/* 设置分针的样式和动画 */
+.minutes{
+    width: 10px;
+    height: 180px;
+    background-color: peachpuff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-100%);
+    /* 设置动画名称 */
+    animation-name: move;
+    /* 设置分针转一圈需要使用的时间60*60 */
+    animation-duration: 3600s;
+    /* 设置动画一直循环播放 */
+    animation-iteration-count: infinite;
+    /* 设置动画速度 */
+    animation-timing-function: linear;
+    /* 上面的几个属性也可以全部写在一起 */
+    /* animation: move 3600s linear infinite; */
+    /* 设置指针旋转圆点 */
+    transform-origin:bottom center; 
+}
+/* 设置秒针的样式和动画 */
+.seconds{
+    width: 6px;
+    height: 200px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-100%);
+    /* 设置动画名称 */
+    animation-name: move;
+    /* 设置秒针转一圈需要使用的时间60 */
+    animation-duration: 60s;
+    /* 设置动画一直循环播放 */
+    animation-iteration-count: infinite;
+    /* 设置动画速度 */
+    animation-timing-function: steps(60);
+    /* 上面的几个属性也可以全部写在一起 */
+    /* animation: move 60s infinite steps(60); */
+    /* 设置指针旋转圆点 */
+    transform-origin:bottom center; 
+}
+
+/* 定义动画css */
+@keyframes move{
+    /* 开始状态 */
+    from{
+        transform:translate(-50%,-100%) rotate(0);
+    }
+    /* 结束状态 */
+    to{
+        transform:translate(-50%,-100%) rotate(360deg);
+    }
+}
+

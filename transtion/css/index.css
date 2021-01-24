@@ -1,0 +1,31 @@
+*{
+    padding: 0px;margin: 0px;
+}
+.sfq{
+    width: 200px;
+    margin: 50px auto;
+}
+.sfq_div>h1{
+    background-color: aquamarine;
+    text-align: center;
+}
+.div_ul{
+    background-color: bisque;
+    text-align: center;
+}
+.div_ul>ul{
+    list-style: none;
+}
+.div_ul{
+    height: 0px;
+    overflow: hidden;
+    /* 设置需要过渡效果的属性 */
+    transition-property: height;
+    /* 设置完成这个过渡效果需要使用的时间 */
+    transition-duration: 0.5s;
+    /* 设置这个过度效果的运动的速度 */
+    transition-timing-function: linear;
+}
+.sfq_div:hover>.div_ul{
+    height: 90px;
+}
